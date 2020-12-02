@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,11 @@ public class ListDataAdapter extends BaseAdapter {
         //2.创建布局
         View view=View.inflate(context,R.id.item_list,null);
 
+        //3.优化 ViewHolder=================只管viewHolder和convertView=======================
 
         return view;
+    }
+    public class ViewHolder{
+        public TextView content;
     }
 }
